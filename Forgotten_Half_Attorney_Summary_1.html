@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Attorney Summary, Page 1 &mdash; The Claim</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#1c2c4c; --crimson:#6e1a1a; --crimson-edge:#4d1212;
+    --gold:#8a6d3b; --gold-lt:#e0c79a;
+    --paper:#f4ecd8; --parch-edge:#e7dcc0;
+    --rule:#c9b890; --ink:#2a2418; --link:#5a3a1a; --link-hover:#8a5a2a;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--paper);color:var(--ink);
+    font-family:"EB Garamond",Georgia,serif;line-height:1.6;font-size:1.05rem;}
+  .wrap{max-width:880px;margin:0 auto;padding:0 18px 80px;}
+  .sheet{background:#fff;margin:0 auto;box-shadow:0 0 28px rgba(0,0,0,.14);}
+  .banner{display:block;width:100%;height:auto;border-bottom:3px solid var(--crimson);}
+  .body{padding:36px 52px 60px;}
+
+  /* ---------- crimson masthead ---------- */
+  .masthead{background:var(--crimson);color:#fff;padding:22px 34px 24px;
+    border-bottom:4px solid var(--gold);}
+  .masthead .eyebrow{display:block;font-family:"Cinzel",serif;font-size:.76rem;
+    letter-spacing:.26em;text-transform:uppercase;color:var(--gold-lt);
+    text-align:center;margin:0 0 .55rem;}
+  .masthead h1{font-family:"Cinzel",serif;font-size:1.62rem;text-align:center;
+    margin:0 0 .7rem;color:#fff;letter-spacing:.02em;line-height:1.25;font-weight:600;}
+  .masthead .lead{text-align:center;font-style:italic;font-size:1.06rem;
+    margin:0 auto .9rem;max-width:47rem;color:#f6ece2;line-height:1.5;}
+  .mast-rule{border:none;border-top:1px solid rgba(255,255,255,.28);
+    max-width:340px;margin:.9rem auto;}
+  .mast-meta{display:flex;flex-wrap:wrap;justify-content:center;gap:.45rem 1.5rem;
+    font-size:.93rem;color:#f0e2d4;text-align:center;}
+  .mast-meta b{color:#fff;font-weight:600;}
+  .mast-next{text-align:center;font-size:.93rem;margin:.85rem 0 0;color:#eddcc8;}
+  .mast-next a{color:#fff;border-bottom:1px solid rgba(255,255,255,.6);text-decoration:none;}
+  .mast-next a:hover{border-bottom-color:#fff;}
+
+  /* ---------- sections ---------- */
+  .sec{margin:2.6rem 0 0;}
+  .sec-head{border-top:2px solid var(--rule);padding-top:1.15rem;margin-bottom:.9rem;}
+  .sec-head .src{display:block;font-family:"Cinzel",serif;font-size:.75rem;
+    letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin:0 0 .3rem;}
+  .sec-head h2{font-family:"Cinzel",serif;color:var(--navy);font-size:1.24rem;
+    margin:0;line-height:1.3;font-weight:600;}
+  .sec-head .mins{display:block;font-size:.88rem;font-style:italic;
+    color:var(--gold);margin:.32rem 0 0;}
+  p{margin:0 0 1rem;text-align:justify;hyphens:auto;}
+  a{color:var(--link);text-decoration:none;word-break:break-word;}
+  a:hover{color:var(--link-hover);text-decoration:underline;}
+  figure.fig{margin:1.5rem 0;padding:0;}
+  figure.fig img{display:block;width:100%;height:auto;border:1px solid var(--rule);
+    border-radius:4px;background:#fff;}
+  figure.fig figcaption{font-size:.88rem;font-style:italic;color:var(--gold);
+    text-align:center;margin:.5rem 0 0;line-height:1.45;}
+  .full-link{background:var(--parch-edge);border:1px solid var(--rule);border-radius:6px;
+    padding:9px 15px;margin:0 0 1rem;font-size:.95rem;text-align:center;}
+  .full-link a{font-weight:600;border-bottom:1px solid var(--link);}
+
+  /* ---------- why-for-a-lawyer box ---------- */
+  table.why{width:100%;border-collapse:collapse;margin:1.1rem 0 .4rem;
+    border:1px solid var(--crimson);}
+  table.why th{background:var(--crimson);color:#fff;font-family:"Cinzel",serif;
+    font-size:.79rem;letter-spacing:.16em;text-transform:uppercase;
+    text-align:left;padding:8px 15px;font-weight:600;}
+  table.why td{padding:12px 15px;background:#fdf8f1;font-size:.99rem;
+    line-height:1.55;text-align:left;}
+
+  .footer-nav{border-top:3px double var(--rule);margin-top:3rem;padding-top:1.3rem;
+    text-align:center;}
+  .footer-nav .nxt{font-family:"Cinzel",serif;color:var(--navy);font-size:1.02rem;
+    margin:0 0 .4rem;}
+  .footer-nav .nxt a{color:var(--crimson);border-bottom:1px solid var(--crimson);font-weight:600;}
+  .footer-nav .sub{font-size:.93rem;font-style:italic;color:var(--gold);margin:.2rem 0 1rem;}
+  .page-footer{font-size:.82rem;color:var(--gold);font-style:italic;line-height:1.5;}
+
+  @media (max-width:600px){
+    .body{padding:22px 20px 40px;}
+    .masthead{padding:18px 20px 20px;}
+    .masthead h1{font-size:1.22rem;}
+    p{text-align:left;}
+    .mast-meta{flex-direction:column;gap:.3rem;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="sheet">
+    <img class="banner" src="banner.jpg" alt="The Forgotten Half of the Patent Clause">
+
+    <div class="masthead">
+      <span class="eyebrow">Attorney Summary &middot; Page One of Three</span>
+      <h1>The Claim</h1>
+      <p class="lead">Who wrote it, why an outsider can be right, the problem, the case law,
+      why nobody sued, the environmental objection retired, and ninety countries.</p>
+      <hr class="mast-rule">
+      <div class="mast-meta">
+        <span><b>7</b> summaries</span>
+        <span><b>24</b> minutes</span>
+        <span>of <b>100</b> minutes across three pages</span>
+      </div>
+      <p class="mast-next"><a href="index.html">Contents</a> &nbsp;&middot;&nbsp; Next: <a href="Forgotten_Half_Attorney_Summary_2.html">Page Two &mdash; What Happened</a>
+      (27 minutes) &middot; then <a href="Forgotten_Half_Attorney_Summary_3.html">Page Three &mdash; The Case</a> (49 minutes)</p>
+    </div>
+
+    <div class="body">
+
+      <p style="text-align:center;font-style:italic;color:var(--gold);margin-bottom:0;">
+      Each summary below points at a chapter rather than replacing it. Where the full text is
+      already published, the link sits directly beneath the heading.</p>
+
+      <!-- ============ 1. PREFACE ============ -->
+      <div class="sec">
+        <div class="sec-head">
+          <span class="src">Volume One &middot; Front Matter</span>
+          <h2>Preface &mdash; Why a Co-inventor of an AI Patent Wrote a Book About What Happens After Patents Expire</h2>
+          <span class="mins">2&frac12; minutes</span>
+        </div>
+
+        <div class="full-link">Full text already published &mdash;
+        <a href="https://marti124.github.io/Patent_Exam/Forgotten_Half_Mini_Preface.html">read the abbreviated Preface</a></div>
+
+        <p>The author is not a lawyer and does not claim to be one. He is Roleigh Martin, a
+        co-inventor of U.S. Patent No. 5,359,509, an early artificial-intelligence system for
+        adjudicating health-insurance claims that was archived in the permanent research collection
+        of the Smithsonian Institution. He spent thirty-four years inside the information-technology
+        organization of a Fortune 25 health insurer, working principally on complex code and
+        database design. His degrees are a B.S. from what is now Truman State University, with a
+        triple minor in American literature, Russian literature, and physical science, and an M.A.
+        in sociology from the University of Northern Iowa, followed in 1978 by a diploma in data processing from Western Business College in Portland, Oregon, an institution that no longer exists.</p>
+
+        <p>Between 1990 and 1995 he founded and edited <em>ShareDebate International</em>, one of the
+        first electronic magazines on the Internet, whose contributors included Milton Friedman,
+        Murray Rothbard, George Gilder, Jerry Pournelle, and Leonard Peikoff. Between 1998 and 2000
+        he published sixty-one articles as a Y2K analyst, gave the keynote at the IQPC Y2K
+        conference in London, and was cited by the President&rsquo;s Y2K Council and the World Bank.
+        He is seventy-six, lives in Northern Kentucky, and founded the Make American Living
+        Affordable community on X, which has grown past 115,000 members. He has published more than
+        111 long-form articles drawing more than 7.8 million cumulative impressions.</p>
+
+        <p>The Preface offers that record for one purpose: to answer the question a reader is
+        entitled to ask, which is why this man saw a constitutional question that patent attorneys,
+        environmental lawyers, regulatory economists, and constitutional scholars have spent
+        fifty-six years not seeing. Its answer is that the question sits across four disciplinary
+        boundaries and is invisible from inside any one of them, and that a career spent moving
+        between fields is the specific preparation for noticing it. It also offers a second answer,
+        narrower and more concrete: a career reading source code produces a habit of reading a
+        structured text for what it says rather than for what practice has settled into. Read that
+        way, &ldquo;limited Times&rdquo; has a type signature. It is a duration. Durations end, and
+        something happens at the end.</p>
+
+        <p>The Preface is equally direct about method. The analysis was assembled with eleven
+        listed artificial-intelligence tools under the standard the U.S. Copyright Office set out in
+        <em>Copyright and Artificial Intelligence, Part 2: Copyrightability</em>, published
+        29 January 2025. Every citation any tool produced was vetted for relevance and accuracy, and where
+        editing was needed, it was done. The manuscript record, as of 30 July 2026, stands at
+        forty-five files carrying seven hundred seventy-three saved revisions, made for many reasons
+        beyond the above &mdash; coherency, readability, sequencing, and so on. The author is
+        diligent to avoid AI hallucinations and misdirection.</p>
+
+        <table class="why">
+          <tr><th>Why this is in front of you</th></tr>
+          <tr><td>Before you spend an hour on a constitutional argument, you will want to know who
+          is making it and how it was built. The Preface answers both without asking you to take
+          anything on trust: the credentials are checkable, the AI methodology is disclosed rather than
+          glossed &mdash; the abbreviated Preface linked above names each tool and the work it
+          performed &mdash; and the known failure mode of AI-assisted legal work is named rather
+          than hidden.</td></tr>
+        </table>
+      </div>
+
+      <!-- ============ 2. V2 CH 9 ============ -->
+      <div class="sec">
+        <div class="sec-head">
+          <span class="src">Volume Two &middot; Chapter 9</span>
+          <h2>When Outsiders Advance Constitutional Law and Other Disciplines</h2>
+          <span class="mins">4&frac14; minutes</span>
+        </div>
+
+        <div class="full-link">Full text already published &mdash;
+        <a href="https://marti124.github.io/Patent_Exam/Forgotten_Half_Chapter_9.html">read Chapter Nine in full</a></div>
+
+        <p>This chapter exists to answer the objection you might have, which is that
+        &ldquo;a non-lawyer working with AI tools is not a promising source of constitutional
+        argument.&rdquo; It
+        answers by assembling twenty cases &mdash; in law, medicine, geology, astronomy, linguistics,
+        and financial regulation &mdash; in which a field held the decisive evidence and did not
+        count it until someone asked a question the field&rsquo;s routines did not generate.</p>
+
+        <p>Four of the twenty are constitutional cases, and in every one the fact that moved the
+        doctrine came from outside the law. <em>Aiko Herzig-Yoshinaga</em> had no law degree, no
+        university post, and no institutional standing; as a teenager she had been imprisoned at
+        Manzanar. Working in the National Archives in the late 1970s she found what forty years of
+        litigation had not &mdash; the government&rsquo;s own original copy of General
+        DeWitt&rsquo;s <em>Final Report</em>, containing passages a later revised version had
+        removed. The deleted material showed the government had known there was no time for
+        individual loyalty hearings, and that the claim of military necessity made to the Supreme
+        Court in 1944 was made while contrary evidence sat in the file. Fred Korematsu&rsquo;s
+        conviction was vacated on a writ of <em>coram nobis</em> in 1983, and in
+        <em>Trump v. Hawaii</em> (2018) the Court said <em>Korematsu</em> had been gravely wrong the
+        day it was decided. The evidence was not merely available somewhere. It was in the
+        government&rsquo;s own files, put there by the government, kept by the government, for forty
+        years.</p>
+
+        <p><em>The historians in Lawrence.</em> <em>Bowers v. Hardwick</em> (1986) upheld a Georgia
+        sodomy law and stated that laws against homosexual conduct had ancient roots. Seventeen
+        years later George Chauncey, Nancy Cott, John D&rsquo;Emilio, Estelle Freedman and others
+        filed a brief in <em>Lawrence v. Texas</em> taking that statement apart from sources that had
+        been in print the whole time. The historical record did not say what <em>Bowers</em> said it
+        said; the category of person <em>Bowers</em> described did not exist in the period
+        <em>Bowers</em> pointed to. The Court overruled <em>Bowers</em>. Nothing was discovered. A
+        court had asserted a fact, everyone believed it, and for seventeen years nobody checked it
+        against a body of scholarship that already said otherwise.</p>
+
+        <p><em>Josephine Goldmark</em> was research director of the National Consumers League and had
+        no law degree. Of the hundred and thirteen pages filed for Oregon in <em>Muller v. Oregon</em>
+        (1908) under Louis Brandeis&rsquo;s name, she and her researchers supplied about ninety-eight
+        &mdash; factory inspection reports, medical testimony, foreign labor statutes. Roughly two
+        pages were legal argument. The Court upheld the law and took formal notice of the material,
+        and the Brandeis brief is the ancestor of every filing that brings a court facts rather than
+        precedent. The chapter attaches two corrections rather than leaving the case as a clean
+        victory: some of the medical evidence was later refuted, and <em>Muller</em> rested on a
+        theory of women&rsquo;s dependence that did real harm for two generations. Praise the method,
+        the chapter says. Do not praise the holding.</p>
+
+        <p><em>Kenneth and Mamie Clark</em> were psychologists, not lawyers, and the chapter is
+        careful to deflate the story most readers know. The doll studies did not decide
+        <em>Brown v. Board of Education</em>. They appear in footnote eleven, supporting a conclusion
+        the Court had already reached on constitutional grounds, and the footnote became famous
+        because it was attacked. What the Clarks supplied was a finding the Court was willing to
+        state &mdash; that segregation produced a sense of inferiority in children that affected
+        their learning. It had been observable for decades. They did not win <em>Brown</em>. They
+        gave the Court a sentence it could write.</p>
+
+        <p>The chapter draws the consequence that matters most to this book, and it is not a
+        flattering one: Goldmark did not argue <em>Muller</em>, the Clarks did not argue
+        <em>Brown</em>, Herzig-Yoshinaga did not argue <em>Korematsu</em>. Each found something.
+        Somebody else carried it. That is the division of labor the author of these volumes is
+        proposing, and it is why the book is addressed to attorneys.</p>
+
+        <p>The pattern outside law is the same. Ignaz Semmelweis read his own hospital&rsquo;s mortality ledgers. Joseph Goldberger
+        noticed that asylum inmates contracted pellagra and asylum staff did not. Robin Warren saw
+        spiral bacteria on gastric biopsies that pathologists had been photographing since the
+        nineteenth century. J Harlen Bretz walked the Channeled Scablands his critics had mostly
+        not visited. Yuri Knorozov read a sixteenth-century Spanish manuscript that had been in
+        print since the 1860s and recognized it as a syllabary rather than a failed alphabet.
+        In every case the material was public. What was missing was the question.</p>
+
+        <p>The chapter is equally careful about what the pattern does not show. Its closing section
+        is a counter-set: cases in which an outsider made a confident claim and the specialists were
+        right to reject it. Institutional resistance is not treated anywhere as evidence of
+        correctness &mdash; the chapter records the stated grounds of each objection precisely
+        because the grounds, not the fact of resistance, are where the information is.</p>
+
+        <p>The distinction the chapter finally draws is the one that matters for this book: what an
+        outsider supplies is the question, and what the field supplies is the judgment about whether
+        the answer is true. That is the relationship this book is asking a lawyer to enter. Twenty
+        cases at two and a half minutes is a list; the chapter itself is the argument, and it is
+        published in full at the link above.</p>
+
+        <table class="why">
+          <tr><th>Why this is in front of you</th></tr>
+          <tr><td>The threshold question for any attorney asked to look at this work is whether a
+          layman&rsquo;s constitutional argument deserves the time. This chapter does not ask you to
+          assume it does. It sets out the conditions under which outsider claims have historically
+          been worth checking, and the conditions under which they have not, and invites you to
+          apply the test yourself.</td></tr>
+        </table>
+      </div>
+
+      <!-- ============ 3. CH 1 ============ -->
+      <div class="sec">
+        <div class="sec-head">
+          <span class="src">Volume One &middot; Chapter 1</span>
+          <h2>Four Problems, One Remedy</h2>
+          <span class="mins">4&frac14; minutes</span>
+        </div>
+
+        <div class="full-link">Full text already published &mdash;
+        <a href="https://marti124.github.io/Patent_Exam/Forgotten_Half_Chapter_1.html">read Chapter One in full</a></div>
+
+        <p>The opening chapter is the map, and it is the only chapter that states the whole claim
+        in one place. It opens not with the Constitution but with four grievances, on the argument
+        that they share a single cause.</p>
+
+        <p><em>The cost of living.</em> A pickup truck that should cost $25,000 in real dollars costs
+        $72,495; a combine that should cost $108,000 costs $646,000; an HVAC replacement that should
+        cost $3,000 costs $18,000. <em>The surveillance subscription.</em> Every new vehicle carries a
+        mandated event data recorder under 49 C.F.R. &sect; 563, a backup camera under FMVSS No. 111,
+        and automatic emergency braking finalized by NHTSA in 2024 &mdash; and GM, Honda, and Hyundai
+        have been documented selling granular driving-behavior data to brokers who resell to
+        insurers. No one can currently buy a new vehicle lawfully without it.
+        <em>The robotic replacement of working Americans.</em> Autonomous trucking competes only
+        because regulation has priced the human-operated rig so high that a half-million-dollar
+        platform looks reasonable beside it; a patent-expired remanufactured semi at a fifth the
+        price of a new one reverses that arithmetic. <em>The lost relationship between driver and
+        machine.</em> The manual transmission fell from roughly a third of new sales in the 1980s to
+        under one percent, which the chapter attributes to CAFE standards, EPA test protocols, and
+        mandates that assume an automatic as the baseline.</p>
+
+        <p>The single cause is a regulatory wall built piece by piece since 1970. The chapter is
+        specific about how the cancellation was accomplished: not by repealing the public&rsquo;s
+        right, which could not have been done openly and was not attempted, but by making the
+        expired design unbuildable. EPA emissions tiers, NHTSA safety mandates, and DOE efficiency
+        standards made it effectively impossible to manufacture a tractor, a pickup, an HVAC system,
+        a semi-trailer, or an incandescent bulb on patents that expired twenty, fifty, or a hundred
+        years ago. The technology was legally free and nobody could lawfully build it. The chapter
+        names the resulting asymmetry precisely &mdash; the original manufacturer is measured against
+        the standards he met when he built the product, while the remanufacturer of his now-expired
+        design is measured against standards ratcheted up decades later.</p>
+
+        <p>The mechanism is the regulatory ratchet, engineered to be irreversible. The anti-backsliding provision at 42 U.S.C. &sect; 6295(o)(1), enacted in
+        March 1987, tells every future administration that an efficiency standard once set can never
+        be relaxed. The same one-way motion runs through EPA tiers and NHTSA mandates. The patent
+        still expires on schedule; what does not expire is the incumbent&rsquo;s protection from
+        low-cost remanufactured competition. Converting that protection from temporary to permanent
+        is what makes this a constitutional question rather than a policy dispute. The chapter traces
+        the ratchet&rsquo;s installation to the Legislative Reorganization Act of 1970, citing
+        D&rsquo;Angelo and Ranalli in <em>Foreign Affairs</em> (2019), and notes that registered
+        lobbyists went from an estimated 200&ndash;400 before 1970 to 13,070 by 2024.</p>
+
+        <p>The chapter's central claim about the ratchet is that its one-way motion is a design
+        feature rather than a byproduct. An ordinary rule tightens under one administration and
+        loosens under the next; these do not. Each tightening becomes the permanent floor, so that
+        the incumbent&rsquo;s protection from remanufactured competition outlives the patent that
+        was supposed to be the whole of it.</p>
+
+        <figure class="fig">
+          <img src="slide_regulatory_ratchet.png" alt="Regulatory Ratchet diagram — Article I Section 8 Clause 8 and one-way regulation">
+          <figcaption>The regulatory ratchet. The patent expires on schedule; the regulatory floor
+          beneath it only rises.</figcaption>
+        </figure>
+
+        <p>Three chapters of doctrine sit behind that claim, and the chapter previews them in two
+        panels rather than asking the reader to wait. The first gathers the Patent Clause
+        authorities &mdash; seven cases between 1882 and 2015 &mdash; on what the public receives
+        when a monopoly ends.</p>
+
+        <figure class="fig">
+          <img src="slide_patent_clause.png" alt="The Supreme Court Has Already Spoken — Patent Clause Foundation, seven cases 1882 to 2015">
+          <figcaption>The Patent Clause foundation: seven decisions, 1882&ndash;2015. Developed in
+          Volume One, Chapter 22, summarized on Page Three.</figcaption>
+        </figure>
+
+        <p>The second gathers the Takings authorities and the modern administrative-law cases &mdash;
+        eight decisions between 1984 and 2024, running from <em>Chevron</em> to
+        <em>Loper Bright</em> &mdash; which together supply both the second constitutional prong and
+        the reason the case became filable when it did.</p>
+
+        <figure class="fig">
+          <img src="slide_takings_clause.png" alt="The Supreme Court Has Already Spoken — Takings Clause and the Modern Court, eight cases 1984 to 2024">
+          <figcaption>The Takings Clause and the modern Court: eight decisions, 1984&ndash;2024.
+          Developed in Volume One, Chapter 23, summarized on Page Three.</figcaption>
+        </figure>
+
+        <p>The injury is put at roughly $22 trillion transferred from households to incumbent
+        manufacturers since 1970, about $3,385 per household per year &mdash; a midpoint the chapter
+        openly derives from two AI-assisted analyses that bracket it, and treats as a floor rather
+        than a ceiling. The claimed effect of restoration is roughly a one-third reduction in the
+        cost of living within a decade, above 50 percent for households that adopt remanufactured
+        goods fully and at least 15 percent for those who keep buying new, through competitive
+        discipline on incumbent prices.</p>
+
+        <p>The remedy is stated with unusual care, and it is narrower than most readers expect.
+        It requires no act of Congress, no amendment, no new legal theory, and no one to break a law;
+        it can be obtained by a single plaintiff with standing in a single federal courtroom. Its
+        operational form is a grandfather exemption plus independent engineering certification, both
+        flowing from the constitutional holding itself. The chapter is candid that this is two legs
+        of a three-legged stool: the third leg &mdash; a tariff or import restriction protecting
+        American plants building patent-expired American platforms &mdash; cannot come from a court
+        and must come from Congress or the President under Article I trade authority. The case has
+        never been filed. It is a question of first impression.</p>
+
+        <table class="why">
+          <tr><th>Why this is in front of you</th></tr>
+          <tr><td>This is the only chapter that states the whole claim in one place, and it defines
+          the remedy narrowly enough to dispose of the objection most attorneys raise first &mdash;
+          that &ldquo;the argument amounts to deregulation by litigation.&rdquo; It does not. A certified
+          remanufactured product answers to the standards of the platform year it mimics; the wall
+          time-shifts rather than falls, and the third leg is conceded to be legislative rather than
+          judicial. Everything on Pages Two and Three assumes this chapter.</td></tr>
+        </table>
+      </div>
+
+      <!-- ============ 4. CH 2 ============ -->
+      <div class="sec">
+        <div class="sec-head">
+          <span class="src">Volume One &middot; Chapter 2</span>
+          <h2>Jefferson&rsquo;s Bargain</h2>
+          <span class="mins">2&frac34; minutes</span>
+        </div>
+
+        <p>This is where the argument acquires case law, and it is the chapter to read if you want
+        to know quickly whether there is anything here.</p>
+
+        <p>The chapter opens with Jefferson&rsquo;s 1813 letter to the Baltimore miller Isaac
+        McPherson &mdash; the source of the much-quoted line about ideas spreading like fire &mdash;
+        and recovers the argument the quotation usually amputates. Jefferson&rsquo;s point was that
+        ideas are not property, that the patent is therefore not the recognition of a natural right
+        but a narrow temporary exception carved out of the natural freedom of ideas, and that the
+        exception is granted for a public purpose. The bargain has two halves: the temporary
+        monopoly, and the public&rsquo;s reciprocal right to make, copy, improve, and remanufacture
+        when the monopoly ends. The chapter traces the lineage back past the founding to the English
+        Statute of Monopolies of 1624, whose fourteen-year term was set at twice the seven-year
+        guild apprenticeship &mdash; the monopoly was to last about as long as it took a new
+        generation of craftsmen to learn the trade. The Patent Act of 1790, drafted substantially by
+        Jefferson and signed by Washington, adopted the same fourteen years.</p>
+
+        <p>The section that matters most to a practitioner is titled <em>The Court Has Said So</em>,
+        and it sets out four Supreme Court decisions across forty-four years.
+        <em>Scott Paper Co. v. Marcalus Manufacturing Co.</em> (1945) held that a private contract
+        could not be used to extend a patent&rsquo;s practical effect past expiration.
+        <em>Sears, Roebuck &amp; Co. v. Stiffel Co.</em> (1964) held that federal patent law occupies
+        the field, so a state could not use unfair-competition law to recreate a monopoly that had
+        ended. <em>Graham v. John Deere Co.</em> (1966) treated the Patent Clause as both an
+        authorization of congressional power and a limitation on it.
+        <em>Bonito Boats, Inc. v. Thunder Craft Boats, Inc.</em> (1989) struck down a Florida statute
+        protecting unpatented boat-hull designs, holding that federal patent law determines not only
+        what is protected during the term but what is free for all to use after it, and that the
+        public&rsquo;s right of access to the public domain is vested, and a state may not rescind
+        it.</p>
+
+        <p>The chapter then divides expired-patent commerce into three tiers &mdash; blocked at
+        roughly 58 percent, hindered at 15, flowing at 27 &mdash; and closes with two observations
+        the book relies on later. The first is the firearms exception: core firearms patents have
+        been public domain for decades, American manufacturers compete, prices reflect that
+        competition, and the reason is political rather than technological. The second is what the
+        chapter calls the combinatorial property &mdash; that an expired patent enters the public
+        domain not as a preserved artifact but as a component available to be combined with every
+        other expired component. The public domain is a kit of parts.</p>
+
+        <figure class="fig">
+          <img src="ch02_three_tier_breakdown.png" alt="Donut chart headed Expired-Patent Commerce, The Three-Tier Breakdown: blocked 58 percent for cars, trucks, tractors, HVAC, appliances and lighting; hindered 15 percent for pharmaceuticals and medical devices; flowing 27 percent for electronics, tools, bicycles and calculators">
+          <figcaption>Expired-patent commerce, divided three ways. <em>Blocked</em>, about 58 percent: post-1970 federal rules left the public&rsquo;s right on the books and made it unusable. <em>Hindered</em>, about 15 percent: approval and licensing architecture obstructs the path from expiration to remanufacture rather than closing it. <em>Flowing</em>, about 27 percent: expired patents enter the public domain on schedule and prices fall.</figcaption>
+        </figure>
+
+
+        <table class="why">
+          <tr><th>Why this is in front of you</th></tr>
+          <tr><td>Four Supreme Court holdings on the post-expiration public domain, stated with what
+          each actually held. <em>Bonito Boats</em>&rsquo; vested-right language is the doctrinal
+          anchor of the Takings prong on Page Three, and the reading of <em>Graham</em> is the
+          anchor of the Patent Clause prong. <em>Graham</em> is also contested ground &mdash;
+          <em>Eldred</em> answered a <em>Graham</em>-based argument by confining that passage to
+          patentability rather than congressional power &mdash; so this is where the book plants its
+          stake on the most argued-over authority in its foundation.</td></tr>
+        </table>
+      </div>
+
+      <!-- ============ 5. CH 6 ============ -->
+      <div class="sec">
+        <div class="sec-head">
+          <span class="src">Volume One &middot; Chapter 6</span>
+          <h2>Why Nobody Noticed: How a Constitutional Violation Hides in Plain Sight</h2>
+          <span class="mins">3&frac14; minutes</span>
+        </div>
+
+        <p>Every attorney who hears this argument asks the same question within the first minute: if
+        this is right, why has no one filed it? The chapter treats that as the strongest objection
+        available and answers it with six forces rather than one.</p>
+
+        <p><strong>Force 1. The corrupt ecosystem.</strong> The Legislative Reorganization Act of
+        1970 opened committee proceedings and recorded votes that had previously been closed. Before
+        it, members could vote their conscience where no trade association could telephone within
+        twelve hours to complain; the word <em>lobbyist</em> records the older arrangement, since
+        they waited in the lobby. Marketed as transparency, the reform handed organized interests a
+        real-time scorecard on every legislator and converted the campaign contribution from a
+        general expression of support into a conditional payment. Registered lobbyists grew from a
+        few hundred in 1970 to more than thirteen thousand by 2024. The chapter credits this account
+        to James D&rsquo;Angelo and Brent Ranalli of the Congressional Research Institute. Around the
+        legislator sit three further nodes: agencies staffed from the industries they oversee and
+        returning to them; the courts, deferential under <em>Chevron</em> for forty years; and a
+        legal-and-consulting economy whose billable hours depend on regulatory complexity persisting.
+        No conspiracy is required. The loop runs on ordinary self-preservation.</p>
+
+        <p><strong>Force 2. Bootleggers and Baptists.</strong> Yandle (1983) named the pattern in
+        which a durable regulation is sustained not by one coalition but by two with opposite motives
+        &mdash; one supporting it for its stated values, the other because it raises the cost of
+        competition. The Baptists supply moral cover; the bootleggers supply political muscle. Each
+        provides what the other lacks, and the resulting architecture is far harder to dislodge than
+        any single-coalition regulation could be.</p>
+
+        <p><strong>Force 3. The institutional blind spot.</strong> The expired-patent commons does
+        not appear inside the operating thinking of the four institutions where the question would
+        have to surface. EPA, NHTSA and DOE counsel read the Clean Air Act, the National Traffic and
+        Motor Vehicle Safety Act, and the Energy Policy and Conservation Act &mdash; not Article I.
+        In Congress, the committees that write regulatory law and the committees that handle
+        intellectual property do not talk to each other, and the question lives in the gap between
+        their jurisdictions. Every administration in fifty-five years has had constitutional lawyers
+        on staff; none was asked whether the regulatory architecture complied with
+        &ldquo;limited Times.&rdquo; And academia is split by a membrane: patent scholarship concerns
+        active patents and gives expiration a sentence, while constitutional scholarship treats the
+        Patent Clause as an intellectual-property specialty rather than Article I structure. The
+        chapter reaches for Kuhn on paradigms and de Bono&rsquo;s nine-dot puzzle &mdash; solvers
+        fail because they impose a boundary the problem never stated.</p>
+
+        <p><strong>Force 4. The doctrinal floor.</strong> This is the force a litigator will care
+        about, because it concerns capability rather than motive. From 1984 until June 2024,
+        <em>Chevron</em> deference meant a challenge would meet the agency&rsquo;s claim that its
+        rule was a reasonable reading of an ambiguous statute and die at the deference threshold
+        before the constitutional merits were reached. Every patent attorney advising a potential
+        plaintiff knew it. The remaining pieces were assembled slowly: the Declaratory Judgment Act
+        of 1934 supplied the vehicle; pre-enforcement standing reached its modern form in 2014; the
+        relevant Takings doctrine arrived in 2012 and 2021; the Major Questions Doctrine was
+        formalized in 2022. <em>Loper Bright Enterprises v. Raimondo</em> removed the last
+        obstruction in June 2024. It did not answer the Patent Clause question. It made the question
+        askable. The chapter&rsquo;s own formulation is that the silence was primarily the silence of
+        waiting.</p>
+
+        <p><strong>Force 5. Moral acquiescence.</strong> The chapter distinguishes between a
+        structure that produces silence without requiring bad faith from most participants, and the
+        separate fact that some participants understood exactly what they were defending. It does not
+        take the comfortable position that nobody is culpable.</p>
+
+        <p><strong>Force 6. Rule-induced behavior.</strong> The final force concerns what happens to
+        the people inside a system once its rules are set &mdash; how a regulatory architecture
+        shapes the conduct, and eventually the perception, of those operating within it, so that the
+        arrangement comes to seem like the nature of things rather than a choice that was made.</p>
+
+        <table class="why">
+          <tr><th>Why this is in front of you</th></tr>
+          <tr><td>&ldquo;Nobody has ever filed this&rdquo; reads to most lawyers as evidence the
+          theory is defective. This chapter offers the competing explanation and makes it
+          falsifiable: the case met <em>Chevron</em> at the threshold for forty years and could not
+          reach the merits. If you accept the fourth force, the fifty-six years of silence stops
+          being evidence against the claim. If you reject it, you have identified the book&rsquo;s
+          weakest joint, and it is worth telling the author so.</td></tr>
+        </table>
+      </div>
+
+      <!-- ============ 6. CH 10 ============ -->
+      <div class="sec">
+        <div class="sec-head">
+          <span class="src">Volume One &middot; Chapter 10</span>
+          <h2>The Environmental Question: Why the Patent Bargain Does Not Unleash 1970s Emissions</h2>
+          <span class="mins">1&frac34; minutes</span>
+        </div>
+
+        <p>This chapter is placed early, and deliberately so, because the environmental objection is
+        the one that stops most readers before they reach the constitutional argument. The chapter
+        states the objection at length and in its strongest form &mdash; in the voice of someone who
+        holds it &mdash; before answering: that &ldquo;the remedy would hand American buyers a
+        1970-grade emissions profile, a 1975-grade fuel-economy profile, and a 1990-grade safety
+        profile, and dismantle fifty years of environmental policy for a one-third reduction in the
+        price of consumer durables.&rdquo;</p>
+
+        <p>The answer turns on a factual premise the objection gets wrong. The objection assumes that
+        remanufacturing a 2005 platform means building it with 2005 emissions equipment. It does not.
+        The set of expired patents is not a fixed technology level frozen at a platform year; it is a
+        continuously expanding kit of components, each with its own expiration date. The three-way
+        catalytic converter&rsquo;s core patents expired in the mid-1990s. Electronic fuel injection
+        went public domain across the 1990s. Oxygen sensors, engine-control units, crankcase
+        ventilation, and onboard diagnostics are all long out of patent. A remanufacturer assembling
+        a vehicle today draws on all of it. The resulting emissions profile is roughly that of 1995
+        to 2005 &mdash; not 1970 &mdash; and by EPA&rsquo;s own criteria-pollutant trend data the
+        largest per-vehicle reductions of the past half-century were achieved by exactly the
+        technology base that became public domain by the mid-2000s.</p>
+
+        <p>The chapter also disposes of a specific and frequently repeated claim. The remedy does not
+        bring back leaded gasoline. The lead phase-out was a fuel rule under 40 C.F.R. Part 80,
+        governing what refiners may sell, and it applies to all retail gasoline regardless of what
+        burns it. A remanufactured vehicle runs on the only fuel a buyer can lawfully purchase.</p>
+
+        <p>The remaining sections take up why competitive markets would not race to the bottom, the
+        Fifth Amendment as a constitutional safety valve, a concern the chapter attributes to Milton
+        Friedman about compensation shading into subsidy, and a proposed sunset amendment as
+        structural insurance.</p>
+
+        <table class="why">
+          <tr><th>Why this is in front of you</th></tr>
+          <tr><td>This is the government&rsquo;s central defense and the objection you would raise
+          first. It is answered here on the facts rather than on policy preference &mdash; the
+          emissions-control technology the objection assumes is patent-blocked has in fact been
+          public domain for two to three decades. Reading this before the injury and remedy chapters
+          means the objection is retired before the evidence arrives, which is the order the book
+          intends.</td></tr>
+        </table>
+      </div>
+
+      <!-- ============ 7. CH 9 ============ -->
+      <div class="sec">
+        <div class="sec-head">
+          <span class="src">Volume One &middot; Chapter 9</span>
+          <h2>Why Wealthy Nations Break the Patent Promise That Poor Nations Honor</h2>
+          <span class="mins">4&frac12; minutes</span>
+        </div>
+
+        <p>The constitutional argument would be worth little if the remedy it seeks had never been
+        administered anywhere. This chapter supplies the natural experiment. Roughly ninety countries
+        permit the new manufacture of vehicles, farm and construction equipment, and household
+        appliances built on designs whose underlying patents have expired. Roughly thirty-four
+        wealthy nations do not &mdash; the United States, the twenty-seven European Union member
+        states, the United Kingdom, Japan, South Korea, Canada, Australia, and New Zealand. The
+        ninety are the experiment, the thirty-four are the control, and the price is the dependent
+        variable.</p>
+
+        <figure class="fig">
+          <img src="map_ninety_countries.png" alt="World map titled Where the Patent Bargain Still Works, marking the roughly ninety nations that allow new manufacture on expired patent designs against the thirty-four that block it, with example vehicles and prices">
+          <figcaption>Ninety nations allow new manufacture on expired patent designs.
+          Thirty-four block it. The same Jeep CJ cannot be lawfully built in the United States at
+          any price.</figcaption>
+        </figure>
+
+        <p>The price gap is documented in the chapter&rsquo;s roster table, converted to U.S. dollars
+        at average 2024&ndash;2026 exchange rates and set against 2024 American manufacturer
+        suggested retail prices for the trims Americans actually buy. The Mahindra Thar runs roughly
+        $10,500&ndash;18,500 against about $45,000 for a four-door Wrangler. ZX Auto&rsquo;s Grand
+        Tiger and Terralord, built on 1997&ndash;2004 Hilux and Tacoma platforms and exported to more
+        than ninety countries, run $13,000&ndash;18,000 against roughly $35,000 for a Tacoma. The
+        Toyota Hilux Champ, a current-production vehicle built in Thailand on the mature Hilux
+        platform, sells under $13,000. Iran Khodro&rsquo;s Peugeot-405-derived Samand runs
+        $8,000&ndash;9,000 against $22,000&ndash;25,000 for the American compact-sedan class, though
+        the chapter flags that figure as distorted by sanctions and currency controls. The pattern
+        runs past vehicles: a 50-horsepower diesel tractor sells in India for roughly $6,000 against
+        a $54,000 American equivalent, a nine-to-one gap wider than any vehicle category. Compact
+        sedans available new at about $9,000 in the honoring markets sell for roughly $35,000 in
+        comparable European Union markets; mid-size pickups at about $13,000 sell for roughly
+        $48,000.</p>
+
+        <p>The chapter also answers the objection that the American constitutional argument is
+        parochial. The United States carries the most explicit version of the time-limited bargain,
+        but it is not alone. Brazil&rsquo;s 1988 constitution, at Article 5 &sect; XXIX, grants the
+        patent as a &ldquo;temporary privilege.&rdquo; Mexico&rsquo;s 1917 constitution, at Article
+        28, authorizes the monopoly only &ldquo;for a specified time.&rdquo; The Philippines&rsquo;
+        1987 constitution, at Article XIV &sect; 13, grants exclusive rights &ldquo;for such period
+        as may be provided by law.&rdquo; TRIPS, signed by 166 nations including the United States,
+        settles the term at twenty years from filing. Expiration is universal; honoring it is
+        not.</p>
+
+        <p>The worked example is the Mahindra Thar, built in India on the Willys-Overland Jeep CJ
+        lineage whose patents have been public domain for three decades and more, sold new with
+        turbodiesel, four-wheel drive, anti-lock brakes, air conditioning, and electronic stability
+        control at roughly a third of the American price for the same lineage. The chapter is careful
+        that the figures are evidence of what Americans should be paying for American-built versions,
+        not an argument for importing, and it includes a section stating expressly what the book does
+        not advocate.</p>
+
+        <p>The safety objection is met with independent certification rather than assertion. Global
+        NCAP, the London-based international assessment program, awarded the 2020 Thar four stars for
+        both adult and child occupant protection in November 2020, citing a stable bodyshell,
+        standard dual front airbags, and ISOFIX anchors. In November 2024 the redesigned Thar ROXX
+        was tested by Bharat NCAP, the Indian government program harmonized with global protocols,
+        and earned five stars for both adult and child occupant protection &mdash; the first
+        body-on-frame SUV to do so under that program. It ships with six airbags, electronic
+        stability control, anti-lock brakes with electronic brakeforce distribution, ISOFIX anchors,
+        hill-descent control, and Level 2 driver-assistance features on higher trims. The chapter is
+        careful about the claim it draws: not that the Thar matches a 2024 Wrangler in every
+        particular, but that a vehicle whose mechanical platform&rsquo;s underlying patents expired
+        half a century ago has been independently certified to a current-year crash standard by named
+        safety bodies.</p>
+
+        <p>The mechanism the chapter identifies is the one that matters constitutionally. The ninety
+        countries are not lax about safety or emissions; they have standards, testing, and
+        certification regimes. The difference is that their regimes calibrate a patent-expired
+        platform to the standards in force when that platform was current, rather than to the most
+        recent year&rsquo;s tier. That is precisely the remedy this book asks a federal court to
+        recognize, already operating in most of the world.</p>
+
+        <p>The chapter closes by connecting that evidence to the American remedy, and the structure
+        is worth a lawyer&rsquo;s attention because two of its three parts are judicial and one is
+        not. The first judicial mechanism is a grandfather exemption permitting any product whose
+        underlying patents expired some years before a regulation&rsquo;s effective date &mdash;
+        twenty years is the figure the author suggests &mdash; to be built to the safety and
+        emissions standards in effect at the time of the patent&rsquo;s filing rather than to
+        current-year standards. The second is independent engineering certification, modeled on
+        Underwriters Laboratories rather than on any federal agency, verifying that new manufacture
+        under the grandfather framework meets those original standards. Both flow from the
+        constitutional holding itself and require no act of Congress.</p>
+
+        <p>The third element cannot come from a court. A judicial remedy unleashing a domestic
+        revival in patent-expired platforms would leave American plants exposed to foreign producers
+        undercutting American workers building American platforms. Protection has to come from
+        Congress or the President under existing Article I trade authority &mdash; constitutional
+        tariffs, quantitative import restrictions, or whichever combination the political process
+        selects. The third leg is therefore not a remanufacturing protection but a
+        domestic-manufacturing protection, and every American factory benefits: the patent-expired
+        remanufacturers keep the price floor that delivers cost-of-living relief to households, and
+        the new-design manufacturers price against domestic competitors rather than foreign
+        undercutters. The cost-of-living relief and the manufacturing-jobs revival arrive together.
+        Remove any one leg and the structure topples.</p>
+
+        <table class="why">
+          <tr><th>Why this is in front of you</th></tr>
+          <tr><td>A court asked to grant relief of this scale will want to know the remedy is
+          administrable. This chapter answers that it is administered now, in roughly ninety
+          jurisdictions, using the same time-shift the book proposes &mdash; standards keyed to the
+          platform year rather than the current year. Remedial feasibility, not comparative
+          politics, is why it appears on this page.</td></tr>
+        </table>
+      </div>
+
+      <!-- ============ FOOTER NAV ============ -->
+      <div class="footer-nav">
+        <p class="nxt">Next &rarr; <a href="Forgotten_Half_Attorney_Summary_2.html">Page Two &mdash; What Happened</a></p>
+        <p class="sub">The cancellation mechanism, the statutory ratchet, the seventeen statutes,
+        ripeness, the injury, and the bargain working where nothing blocked it. Seven summaries,
+        27 minutes.</p>
+        <p class="nxt" style="font-size:.95rem;margin-top:1rem;">Back &rarr; <a href="index.html">Contents</a></p>
+        <div class="page-footer">
+          <p><em>The Forgotten Half of the Patent Clause</em> &mdash; Attorney Summary, Page One of Three
+          &nbsp;&middot;&nbsp; by Roleigh Martin &nbsp;&middot;&nbsp; Copyright &copy; 2026. All rights reserved.<br>
+          These summaries point at the chapters they describe. They are not a substitute for the text.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+</body>
+</html>
