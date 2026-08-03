@@ -97,6 +97,14 @@
     p{text-align:left;}
     .mast-meta{flex-direction:column;gap:.3rem;}
   }
+
+  /* ---------- link affordance: inline links are underlined at rest ---------- */
+  a{text-decoration:underline;text-underline-offset:.14em;text-decoration-thickness:.055em;
+    text-decoration-color:rgba(90,58,26,.45);}
+  a:hover{text-decoration:underline;text-decoration-color:currentColor;}
+  .mast-next a,.contact a,.footer-nav .nxt a,.full-link a,.stair .ttl a,.doors .t a,
+  .mast-next a:hover,.contact a:hover,.footer-nav .nxt a:hover,.full-link a:hover,
+  .stair .ttl a:hover,.doors .t a:hover{text-decoration:none;}
 </style>
 </head>
 <body>
@@ -220,7 +228,8 @@
         claims-adjudication system, which entered the Smithsonian&rsquo;s permanent collection in 1996.
         He has lived inside the patent system as a named inventor, not merely read about it.</li>
         <li>A retired Fortune 25 systems analyst (Optum / UnitedHealth Group). M.A., sociology,
-        University of Northern Iowa, emphasizing survey research.</li>
+        University of Northern Iowa, emphasizing statistical analysis, group decision making,
+        social and political policy making.</li>
         <li>Author of more than 110 long-form articles &mdash; 39 of them on the Patent Clause, drawing
         more than 1.7 million impressions on their own, out of more than 7.7 million across all of
         them. The argument was developed in public and tested against readers over many months.</li>
